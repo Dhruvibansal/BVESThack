@@ -1,0 +1,188 @@
+// Variables
+
+$main-color: #2b2d3e;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+$bg-color: #343e59;
+$max-width: 1100px;
+$speed-f: 200ms;
+$speed-n: 250ms;
+$speed-s: 300ms;
+
+// Reset
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base Styling */
+
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background: $light-color;
+  min-height: 4000px;
+}
+
+a {
+  color: $dark-color;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
+
+/* Utility Classes */
+
+.container {
+  max-width: $max-width;
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  background: $dark-color;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn-apply {
+  background: #264de4;
+  padding: 0.7rem;
+  width: 400px;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.py-1 {
+  padding: 1rem 0;
+}
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+.p-3 {
+  padding: 3rem;
+}
+
+.l-heading {
+  font-size: 2rem;
+}
+
+.navbar-fixed {
+  top: 1rem;
+  z-index: 100;
+  position: sticky;
+  width: 70%;
+}
+
+// BANNER
+
+#banner {
+  width: 100%;
+  height: 105vh;
+  overflow: hidden;
+  .banner-img {
+    background: url("../img/pexels-kevin-ku-577585.jpg") no-repeat center
+      center/cover;
+    height: 60vh;
+  }
+  .call-to-action {
+    .container {
+      height: 40vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+}
+
+// Navigation Bar
+
+#main-nav {
+  position: sticky;
+  background: #fff;
+  border-radius: 10px;
+  width: 70%;
+  margin: -33px auto;
+  z-index: 100;
+}
+
+#main-nav .container {
+  display: grid;
+  grid-template-columns: 2fr 3fr 6fr;
+  padding: 1rem;
+  align-items: center;
+}
+
+#main-nav .logo {
+  width: 180px;
+}
+
+#main-nav ul {
+  justify-self: end;
+  display: flex;
+}
+
+#main-nav ul li a {
+  padding: 0.75rem;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: all $speed-f ease-in;
+}
+
+#main-nav ul li a:hover {
+  background: #13277538;
+  color: #132775;
+}
+
+#main-nav .social {
+  justify-self: center;
+}
+
+#main-nav .social a {
+  margin-right: 0.1rem;
+  #facebook,
+  #instagram {
+    transition: color $speed-n ease-in;
+  }
+}
+
+#main-nav .social a:hover {
+  #facebook {
+    color: #3b5998;
+  }
+  #instagram {
+    color: #d6249f;
+  }
+}
+
+#home {
+  min-height: 200px;
+  background: springgreen;
+}
